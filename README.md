@@ -1,21 +1,21 @@
-#GTB 公链文档
+#GTB Chain Document
 
-GTB 公链以JSON RPC的方式提供API service，支持任意Ethereum Library连接到 GTB公链
+The GTB public chain provides API services in the form of JSON RPC, supporting any Ethereum library to connect to the GTB public chain.
 
 ```
-公链RPC 地址: http://api.gttdollar.com:8545
+RPC Address: http://api.gttdollar.com:8545
 Chain ID:1234
 ```
-本文以 https://web3js.readthedocs.io/en/1.0/#来做展示
+This article is shown at [web3js](https://web3js.readthedocs.io/en/1.0/#)
 
-### 使用web3连接公链
+### Use web3 to connect the public chain
 
 ```
 var Web3 = require(“web3”);
 var web3 = new Web3(new Web3.providers.HttpProvider("http://api.gttdollar.com:8545"));
 ```
 
-### 使用web3创建钱包
+### Create a wallet using web3
 
 ```
 var Web3 = require(“web3”);
@@ -24,7 +24,7 @@ var accounts = web3.eth.accounts.create();
 console.log(accounts);
 ```
 
-### 使用web3发送交易
+### Send a transaction using web3
 
 ```
 
@@ -40,24 +40,31 @@ web3.eth.sendTransaction({
 
 ```
 
-### 使用 web3 查询余额
+### Check balance using web3
 
 ```
 web3.eth.getBalance(currentAccount).then(console.log)
-```
-### Web socket 监听
+```
 
+### Web socket listener using web3
 
-GTB公链 web socket 没有开放给public access，需要使用 web socket 请提供 public ip 添加白名单
-var web3 = new Web3(new Web3.providers.WebsocketProvider(“ws://api.gttdollar.com:8546”));
-### gtb 公链 api
+GTB public chain web socket is not open to public access, need to use web socket Please provide public ip add whitelist
 
-### 获得账户余额
+```
+var web3 = new Web3(new Web3.providers.WebsocketProvider("ws://api.gttdollar.com:8546"));
+```
+###gtb 公链 api
 
+### Get account balance
+
+```
 http://api.gttdollar.com/data/balance/get?address=0xeAF9D0b79Ba340d96aE17D4D728374Fe526d8784
+```
 
-### 获得账户余额
+### Get account transaction history
+```
 http://api.gttdollar.com//transaction/history?tokenName=GTB&addr=GTB
+```
 
 
 
