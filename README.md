@@ -53,7 +53,7 @@ GTB public chain web socket is not open to public access, need to use web socket
 ```
 var web3 = new Web3(new Web3.providers.WebsocketProvider("ws://api.gttdollar.com:8546"));
 ```
-###gtb 公链 api
+##gtb 公链 api
 
 ### Get account balance
 
