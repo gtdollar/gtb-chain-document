@@ -3,7 +3,7 @@
 The GTB public chain provides API services in the form of JSON RPC, supporting any Ethereum library to connect to the GTB public chain.
 
 ```
-RPC Address: http://api.gttdollar.com:8545
+RPC Address: https://api.gttdollar.com:8080
 Chain ID:1234
 ```
 This article is shown at [web3js](https://web3js.readthedocs.io/en/1.0/#)
@@ -65,6 +65,3 @@ http://api.gttdollar.com/data/balance/get?address=0xeAF9D0b79Ba340d96aE17D4D7283
 ```
 http://api.gttdollar.com//transaction/history?tokenName=GTB&addr=GTB
 ```
-
-
-
